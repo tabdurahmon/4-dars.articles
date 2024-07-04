@@ -1,50 +1,52 @@
-import "./App.css";
-
-// react-router-dom
-import {
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-} from "react-router-dom";
+// rrd imports
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Faq from "./pages/help/Faq";
-import Form from "./pages/help/Form";
-import PageNotFound from "./pages/PageNotFound";
-import Articles from "./pages/articles/Articles";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import ErrorPage from "./pages/ErrorPage";
+import List from "./pages/List";
+import ListAbout from "./pages/ListAbout";
 
-// layouts
+//layuts
 import RootLayout from "./layout/RootLayout";
-import ContactLayout from "./layout/ContactLayout";
-import ArticlesLayout from "./layout/ArticlesLayout";
+import ListLayout from "./layout/ListLayout";
 
-function App() {
-  const routes = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<ContactLayout />}>
-          <Route path="faq" element={<Faq />} />
-          <Route path="form" element={<Form />} />
-        </Route>
-        <Route path="articles" element={<ArticlesLayout />}>
-          <Route index element={<Articles />} />
-        </Route>
-        {/* PAGE NOT FOUND */}
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
-    )
-  );
 
-  return (
-    <div className="App">
-      <RouterProvider router={routes} />
-    </div>
-  );
-}
+const App = () => {
+  const routers = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/contact",
+          element: <ListLayout />,
+          children: [
+            {
+              index: true,
+              element: <List />,
+            },
+            {
+              path: ":id",
+              element: <ListAbout />,
+            },
+          ],
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={routers} />;
+};
 
 export default App;
