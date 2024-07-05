@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+function useFetch(url) {
   const [data, setData] = useState(null);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState(null);
@@ -18,13 +18,14 @@ const useFetch = (url) => {
         setIsPending(false);
       } catch (err) {
         setError(err.message);
+        console.log(err.message);
         setIsPending(false);
       }
     };
     fetchData();
-  }, [url]);
+  }, []);
 
   return { data, isPending, error };
-};
+}
 
 export { useFetch };

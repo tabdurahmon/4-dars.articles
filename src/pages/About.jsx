@@ -1,41 +1,12 @@
+
+
 function About() {
   return (
-    <div className=" ml-auto mr-auto  w-[1000px] grid place-items-center">
-      <h1 className="text-2xl mt-[50px] text-white font-mono ">About Pages</h1>
-      <h3 className="mt-[50px] ">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-          voluptate eius similique libero magnam corporis odit architecto
-          pariatur magni ea saepe ex hic eum illo tempore itaque, eos modi
-          perspiciatis expedita inventore reprehenderit obcaecati beatae odio.
-          Molestiae recusandae dignissimos nesciunt eveniet iure, facere ducimus
-          dicta totam, adipisci incidunt dolore sed nisi nobis officia
-          perspiciatis minima odit voluptate? Distinctio, repellendus ratione
-          amet sed illum, maiores, provident iusto repellat corporis dolores
-          sunt ea labore enim impedit aliquid explicabo ex aut veritatis quos
-          cumque nemo odit molestiae accusamus perspiciatis? Saepe quis corporis
-          aut magnam nam. Iste, perferendis ipsum optio reprehenderit omnis rem
-          culpa dolore numquam in sunt! Cum soluta dolor tempore nostrum
-          inventore, dolores at excepturi placeat eveniet sint molestiae,
-          cupiditate error similique ipsam quia ullam vitae, laborum ex? Quas ad
-          doloremque officiis praesentium magni quae libero necessitatibus iusto
-          ullam sapiente, nemo aperiam dignissimos facere. Id culpa asperiores,
-          fugiat dolores mollitia eius eos delectus natus provident porro atque
-          consequatur nemo ad quasi, odit adipisci cupiditate dolore, voluptatum
-          tempora. Atque, quibusdam. Impedit, commodi nobis? Esse veniam
-          temporibus quasi ullam est ipsum aut, animi eligendi perferendis
-          dolorem ducimus delectus sunt veritatis minus saepe. In accusantium
-          neque facere? Culpa consequuntur illo, voluptates earum, voluptatem
-          iusto ex accusamus dolores ea quasi illum? Ipsa, exercitationem?
-          Ipsam, molestias nobis fuga porro delectus nisi temporibus repellat,
-          cumque ad quibusdam dolorum. Odit perferendis quod ab eius, impedit
-          laboriosam itaque repellendus rerum dolorum sed quaerat quia aperiam
-          labore eum tempore atque nihil error voluptatibus adipisci
-          dignissimos. Quia numquam voluptates optio labore aliquam?
-        </p>
-      </h3>
+    <div className="w-full text-center h-lvh">
+      <h1 className="text-2xl font-bold mb-5">About</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A assumenda, recusandae non explicabo provident eveniet consequatur ea, asperiores qui tempore architecto voluptatum repellendus doloribus fugit voluptate debitis quis et reprehenderit ratione ipsa. Libero odit quo fugiat dignissimos repellendus voluptatibus magnam quisquam id non incidunt? Architecto accusantium amet sapiente eveniet molestiae recusandae facilis modi ex dolor veritatis iusto dolore exercitationem delectus sed minus, iure magnam, fugiat quisquam ipsam quidem consectetur aliquam. Expedita voluptatum odio officiis nam quo, quia facere incidunt, nemo in nesciunt ad nobis tempore repellendus ipsam excepturi beatae deleniti alias! Voluptatibus fuga dolor, possimus maiores explicabo tempore corrupti veritatis?</p>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

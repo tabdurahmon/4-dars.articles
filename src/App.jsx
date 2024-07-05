@@ -1,21 +1,17 @@
-// rrd imports
+//rrd inport
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-// pages
-import Home from "./pages/home";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import ErrorPage from "./pages/ErrorPage";
-import List from "./pages/List";
-import ListAbout from "./pages/ListAbout";
-
-//layuts
+//layout
 import RootLayout from "./layout/RootLayout";
-import ListLayout from "./layout/ListLayout";
+//pages
+import Home from "./pages/Home";
+import Products from "./pages/Products";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import SingleProduct from "./pages/SingleProduct";
+import ErrorPage from "./pages/ErrorPage";
 
-
-const App = () => {
-  const routers = createBrowserRouter([
+function App() {
+  const routes = createBrowserRouter([
     {
       path: "/",
       element: <RootLayout />,
@@ -26,27 +22,30 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "/about",
+          path: "products",
+          element: <Products />,
+        },
+        {
+          path: "about",
           element: <About />,
         },
         {
-          path: "/contact",
-          element: <ListLayout />,
-          children: [
-            {
-              index: true,
-              element: <List />,
-            },
-            {
-              path: ":id",
-              element: <ListAbout />,
-            },
-          ],
+          path: "contact",
+          element: <Contact />,
+        },
+        {
+          path: "singleProduct/:id",
+          element: <SingleProduct />,
         },
       ],
     },
   ]);
-  return <RouterProvider router={routers} />;
-};
+
+  return (
+    <div>
+      <RouterProvider router={routes} />
+    </div>
+  );
+}
 
 export default App;
