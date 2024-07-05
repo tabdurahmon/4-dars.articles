@@ -4,9 +4,8 @@ import { useFetch } from "../hook/useFetch";
 function SingleProduct() {
   const { id } = useParams();
   const url = "https://dummyjson.com/products/" + id;
-  console.log(url);
+
   const { data, isPanding, error } = useFetch(url);
-  console.log(data);
 
   return (
     <div>
