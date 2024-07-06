@@ -30,10 +30,7 @@ function SingleProduct() {
                 <span className="font-bold text-xl font-serif ">
                   New Price:{" "}
                 </span>
-                {(
-                  data.price -
-                  (data.price * data.discountPercentage) / 100
-                ).toFixed(2)}
+                {(data.price - data.price * data.discountPercentage).toFixed(2)}
                 ${" "}
               </span>
             </div>
